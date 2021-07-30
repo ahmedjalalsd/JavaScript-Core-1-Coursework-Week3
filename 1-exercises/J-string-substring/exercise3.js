@@ -9,6 +9,8 @@
 let statement = "I do not like programming";
 
 let result = "";
+result += statement.substring(0, 5);
+result += statement.substring(9);
 
 console.log(result);
 
