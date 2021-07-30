@@ -1,5 +1,6 @@
 /*
-    Many years into the future, a team of Space Voyagers find their ship is low on Oxygen and need to dock
+    Many years into the future, a team of Space Voyagers find their ship is low on Oxygen and 
+    need to dock
     somewhere safe while they call home for help.
   
     Their computer detects a list of nearby planets that have Oxygen in their atmosphere.
@@ -11,8 +12,25 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+function findSafeOxygenLevel(arr) {
+  // for (let number of arr) {
+  //   number = parseFloat(number, 10);
+  //   if (number >= 19.5 && number <= 23.5) {
+  //     return number + "%";
+  //   }
+  // }
+  return arr.find((num) => {
+    num = parseFloat(num, 10);
+    if (num >= 19.5 && num <= 23.5) {
+      return num + "%";
+    }
+  });
+}
 
+// console.log("11.3%" > 12);
+console.log(
+  findSafeOxygenLevel(["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"])
+);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 test("findSafeOxygenLevel function works - case 1", () => {

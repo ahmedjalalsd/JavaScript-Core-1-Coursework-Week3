@@ -7,7 +7,8 @@
 
   If any other berries are present, it's best not to eat from the bush at all!
 
-  Create a function which checks if the bush has ALL PINK berries and is safe for the astronauts to eat from the bush.
+  Create a function which checks if the bush has ALL PINK berries and is safe for the 
+  astronauts to eat from the bush.
   Use the tests to confirm which message to return
   
   This exercise can be solved in a few different ways. One way might include the array methods
@@ -23,7 +24,16 @@
 
 function isBushSafe(berryArray) {
   //Write your code here
+  let check = berryArray.every((color) => {
+    return color === "pink";
+  });
+  if (check) {
+    return "Bush is safe to eat from";
+  }
+  return "Toxic! Leave bush alone!";
 }
+
+// console.log(isBushSafe(["pink", "pink", "pink", "pink"]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

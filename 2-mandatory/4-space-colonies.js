@@ -15,7 +15,13 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(arr) {
+  return arr.filter((val) => {
+    if (val.indexOf(" ") > 0 && val[0] === "A") {
+      return val;
+    }
+  });
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
